@@ -2,17 +2,6 @@
 
 This project is a task management system built using Next.js, MongoDB, and Tailwind CSS. It provides a user-friendly interface for managing tasks, including creating, reading, updating, and deleting them (CRUD operations).
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Technologies Used](#technologies-used)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Environment Variables](#environment-variables)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
