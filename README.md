@@ -35,7 +35,5 @@ This task management system aims to simplify task organization and tracking.  It
 - **Responsive Design:**  The application is designed to work seamlessly on different screen sizes.
 - **User-Friendly Interface:**  Intuitive and easy-to-navigate interface.
 - **Data Persistence:** Tasks are stored in MongoDB, ensuring data is preserved across sessions.
-- **(Optional) Authentication:**  (If implemented) Secure user authentication to protect task data.  Describe the authentication method used (e.g., JWT, NextAuth.js).
-- **(Optional) Task Categories/Tags:** (If implemented) Ability to categorize or tag tasks for better organization.
-- **(Optional) Search Functionality:** (If implemented) Search tasks by keywords.
+
 
