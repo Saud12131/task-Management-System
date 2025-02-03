@@ -1,9 +1,4 @@
-import mongoose from "mongoose";
-
-// Add this type declaration at the top of the file
-declare global {
-    var mongoose: { conn: any; promise: any } | undefined;
-}
+import mongoose, { Mongoose } from "mongoose";
 
 const MONGODB_URI = process.env.MONGODB_URI || "";
 
@@ -11,15 +6,20 @@ if (!MONGODB_URI) {
     throw new Error("Please define the MONGODB_URI environment variable");
 }
 
-let cached = global.mongoose || { conn: null, promise: null };
+interface ConnectionCache {
+    conn: Mongoose | null;
+    promise: Promise<Mongoose> | null;
+}
 
-async function connectDB() {
+const cached: ConnectionCache = { conn: null, promise: null };
+
+async function connectDB(): Promise<Mongoose> {
     if (cached.conn) return cached.conn;
 
     if (!cached.promise) {
         cached.promise = mongoose.connect(MONGODB_URI, {
             dbName: "taskManager"
-        } as mongoose.ConnectOptions).then((mongoose) => mongoose);
+        } as mongoose.ConnectOptions).then((mongooseInstance) => mongooseInstance);
     }
 
     cached.conn = await cached.promise;

@@ -37,6 +37,7 @@ export default function TaskList() {
       const response = await axios.get("/api/task")
       setTasks(response.data)
     } catch (err) {
+      console.log(err)
       setToast({ message: "Failed to fetch tasks", type: "error" })
     } finally {
       setIsLoading(false)
@@ -54,6 +55,7 @@ export default function TaskList() {
         setDescription("")
         setToast({ message: "Task created successfully", type: "success" })
       } catch (err) {
+        console.log(err)
         setToast({ message: "Failed to create task", type: "error" })
       } finally {
         setIsSubmitting(false)
@@ -79,6 +81,7 @@ export default function TaskList() {
         setEditMode(false)
         setToast({ message: "Task updated successfully", type: "success" })
       } catch (err) {
+        console.log(err)
         setToast({ message: "Failed to update task", type: "error" })
       }
     }
@@ -90,6 +93,7 @@ export default function TaskList() {
       setTasks((prevTasks) => prevTasks.filter((task) => task._id !== id))
       setToast({ message: "Task deleted successfully", type: "success" })
     } catch (err) {
+      console.log(err)
       setToast({ message: "Failed to delete task", type: "error" })
     }
   }
@@ -101,6 +105,7 @@ export default function TaskList() {
         prevTasks.map((task) => (task._id === taskId ? res.data : task))
       );
     } catch (err) {
+      console.log(err)
       setToast({ message: "Failed to update task status", type: "error" });
     }
   };

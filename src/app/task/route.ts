@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import TaskModel from "@/model/TaskModel";
 import connectDB from "@/lib/db";
-async function GET(request: Request) {
+async function GET() {
     await connectDB();
     const tasks = await TaskModel.find();
     return NextResponse.json(tasks);
