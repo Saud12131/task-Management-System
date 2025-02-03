@@ -13,7 +13,7 @@ This task management system aims to simplify task organization and tracking.  It
 - **MongoDB:** A NoSQL database for storing task data.
 - **Tailwind CSS:** A utility-first CSS framework for rapid UI development.
 - **Node.js:**  The JavaScript runtime environment.
-- **npm (or yarn):** Package manager for dependencies.
+- **npm:** Package manager for dependencies.
 
 ## Features
 
@@ -25,4 +25,6 @@ This task management system aims to simplify task organization and tracking.  It
 - **User-Friendly Interface:**  Intuitive and easy-to-navigate interface.
 - **Data Persistence:** Tasks are stored in MongoDB, ensuring data is preserved across sessions.
 
+## Live link:- 
+https://task-management-system-dun-zeta.vercel.app/
 
